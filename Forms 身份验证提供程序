@@ -1,0 +1,5 @@
+ASP.NET Forms 身份验证概述
+Forms 身份验证使您可以使用自己的代码对用户进行身份验证，然后将身份验证标记保留在 Cookie 或页的 URL 中。Forms 身份验证通过FormsAuthenticationModule 类参与到 ASP.NET 页的生命周期中。可以通过 FormsAuthentication 类访问 Forms 身份验证信息和功能。
+若要使用 Forms 身份验证，可以创建一个登录页。该登录页既可收集用户的凭据，又包含用于对这些凭据进行身份验证的代码。通常，可以对应用程序进行配置，以便在用户尝试访问受保护的资源（如要求身份验证的页）时，将请求重定向到登录页。如果用户的凭据有效，则可以调用FormsAuthentication 类的方法，以使用适当的身份验证票证 (Cookie) 将请求重定向回到最初请求的资源。如果不需要进行重定向，则只需获取 Forms 身份验证 Cookie 或对其进行设置即可。在后续的请求中，用户的浏览器会随同请求一起传递相应的身份验证 Cookie，从而绕开登录页。
+通过使用 authentication 配置元素，可以对 Forms 身份验证进行配置。最简单的情况是使用登录页。在配置文件中，指定一个 URL 以将未经身份验证的请求重定向到登录页。然后在 Web.config 文件或单独的文件中定义有效的凭据。下面的示例演示配置文件的一部分，其中为 Authenticate 方法指定了登录页和身份验证凭据。密码已经使用 HashPasswordForStoringInConfigFile 方法进行加密。
+
