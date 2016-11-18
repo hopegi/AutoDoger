@@ -1,4 +1,6 @@
-# AutoDoger
+-------------
+|# AutoDoger|
+-------------
 Android Fast Develop Framework
 
 <br/>=================================================<br/>
