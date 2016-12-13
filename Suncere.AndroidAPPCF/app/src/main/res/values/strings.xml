@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="app_name">Suncere.AndroidAppCF</string>
+
+    <!-- AQI建议 -->
+	<string name="aqi_suggest_1">各类人群可正常活动</string>
+	<string name="aqi_suggest_2">极少数异常敏感人群应减少户外活动</string>
+	<string name="aqi_suggest_3">儿童、老年人及心脏病、呼吸系统疾病患者应减少长时间、高强度的户外锻炼</string>
+	<string name="aqi_suggest_4">儿童、老年人及心脏病、呼吸系统疾病患者应避免长时间、高强度的户外锻炼，一般人群适量减少户外活动</string>
+	<string name="aqi_suggest_5">儿童、老年人和心脏病、肺病患者应停留在室内，停止户外运动，一般人群减少户外运动</string>
+	<string name="aqi_suggest_6">儿童、老年人和病人应当留在室内，避免体力消耗，一般人群应避免户外活动</string>
+	
+	<!-- AQI健康影响 -->
+	<string name="aqi_health_1">空气质量令人满意，基本无空气污染</string>
+	<string name="aqi_health_2">空气质量可接受，但某些污染物可能对极少数异常敏感人群健康有较弱影响</string>
+	<string name="aqi_health_3">易感人群症状有轻度加剧，健康人群出现刺激症状</string>
+	<string name="aqi_health_4">进一步加剧易感人群症状，可能对健康人群心脏、呼吸系统有影响</string>
+	<string name="aqi_health_5">心脏病和肺病患者症状显著加剧，运动耐受力降低，健康人群普遍出现症状</string>
+	<string name="aqi_health_6">健康人群运动耐受力降低，有明显强烈症状，提前出现某些疾病</string>
+	
+	<!-- 刷新控件专用 -->
+	<string name="pull_to_refresh">下拉可以刷新</string>
+	<string name="release_to_refresh">释放立即刷新</string>
+	<string name="refreshing">正在刷新…</string>
+	<string name="not_updated_yet">暂未更新过</string>
+	<string name="updated_at">上次更新于%1$s前</string>
+	<string name="updated_just_now">刚刚更新</string>
+	<string name="time_error">时间有问题</string>
+	
+	<!-- 单位 -->
+    <string name="UnitMicrogram">μg/m³</string>
+    <string name="UnitMilligram">mg/m³</string>
+    
+    <string name="uselessnetwork">网络不可用，请检查网络设置</string>
+</resources>

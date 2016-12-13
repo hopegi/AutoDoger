@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="backgroundColor" format="color|reference|string"/>
+    <declare-styleable name="segmentcontrol">
+        <attr name="cornerRadius" format="dimension|reference" />
+        <attr name="colors" format="color|reference" />
+        <attr name="backgroundColor"/>
+        <attr name="texts" format="string|reference" />
+        <attr name="android:textSize" />
+        <attr name="direction" format="enum">
+            <enum name="horizon" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="gaps" format="dimension|reference" />
+        <attr name="horizonGap" format="dimension|reference" />
+        <attr name="verticalGap" format="dimension|reference" />
+        <attr name="selectTextColor" format="color|reference"/>
+        <attr name="unselectTextColor" format="color|reference"/>
+    </declare-styleable>
+        
+    <declare-styleable name="tabview">
+        <attr name="tabBarColor" format="color|reference"/>
+        <attr name="selectColor" format="color|reference"/>
+        <attr name="unselectColor" format="color|reference"/>
+        
+         <attr name="selectColors" format="string"/>
+       <attr name="unselectColors" format="string"/>
+        
+        <attr name="selectIcons" format="string"/>
+        <attr name="unselectIcons" format="string"/>
+        <attr name="tabFragments" format="string"/>
+        <attr name="defaultSelectIndex" format="integer"/>
+        <attr name="tabTitles" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="View">
+        <attr name="text" format="string"/>
+        <attr name="textRes" format="string"/>
+        <attr name="textColor"  format="string"/>
+		<!-- 只用于设置资源文件的 -->
+		<attr name="textColorRes" format="string"/>
+        <attr name="src" format="string"/>
+        <attr name="Viewbackground" format="string"/>
+        <!-- 只用于设置背景颜色  -->
+        <attr name="backgroundColor"/>
+        <attr name="BindData" format="string"/>
+        <!-- 用于adapter -->
+        <attr name="layout" format="reference"/>
+        <!-- 用于adapter -->
+        <attr name="datasource" format="string"/>
+        <!-- 用于adapter -->
+        <attr name="adapter" format="string"/>
+    </declare-styleable>
+        
+</resources>

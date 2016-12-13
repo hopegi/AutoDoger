@@ -1,0 +1,16 @@
+<RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ViewPager
+        android:id="@+id/lanuchVp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+    <suncere.androidappcf.controls.MyUIPagerControlView 
+        android:id="@+id/lanuchPager"
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="8dp"/>"
+</RelativeLayout>
