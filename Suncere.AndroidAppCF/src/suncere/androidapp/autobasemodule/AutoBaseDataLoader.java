@@ -55,8 +55,8 @@ public class AutoBaseDataLoader extends BaseLoader {
 		String urlKey;
 		for(Entry<String, Object> kvp : para.entrySet())
 		{
-			if(kvp.getKey().startsWith("@"))continue;
-			urlKey=kvp.getKey().startsWith("&")?kvp.getKey().substring(1):kvp.getKey();
+			urlKey=QueryParameterHelper.GetNetParameterName(kvp.getKey());
+			if(urlKey.length()==0)continue;
 			if(kvp.getValue() instanceof String|| TypeHelper.IsValueType(kvp.getValue()))
 				result+=String.format("%s=%s&", urlKey,EncodingString( kvp.getValue().toString()));
 			else if(kvp.getValue() instanceof List<?>)
