@@ -67,6 +67,7 @@ public class SqlStatementService {
 		String whereStr="";
 		Object paraObjValue;
 		String fieldName;
+		String operatString;
 		HashMap<String, Object> localParams=new HashMap<String, Object>();
 //		if(otherParams!=null)
 //			localParams.putAll(otherParams);
@@ -95,18 +96,35 @@ public class SqlStatementService {
 			}
 		}
 		
+		String whereStrModel;
+		boolean inject;
 		for(Entry<String, Object> kvp : localParams.entrySet())
 		{
 //			fieldName=this.GetMappingColumnName(kvp.getKey());
 //			paraObjValue=localParams.get(fieldName);
 			paraObjValue=localParams.get(kvp.getKey());
-			fieldName=this.GetMappingColumnName(kvp.getKey());
-			if(TypeHelper.IsNumberType(paraObjValue))
+			fieldName=this.GetMappingColumnName( QueryParameterHelper.GetDbParemeterName( kvp.getKey()) );
+			operatString=QueryParameterHelper.GetDbOperator(kvp.getKey());
+			inject=false;
+			if(operatString.equals(QueryParameterHelper.IN))
 			{
-				whereStr+=fieldName+" = "+paraObjValue+" AND ";
+				whereStrModel="%s IN ('%s') AND ";
+			}
+			else if(operatString.equals(QueryParameterHelper.LIKE))
+			{
+				whereStrModel="%s LIKE '%%%s%' AND ";
+				inject=true;
+			}
+			else
+			{
+				whereStrModel="%s  "+operatString+" %s AND ";
+			}
+			if(inject || TypeHelper.IsNumberType(paraObjValue))
+			{
+				whereStr+=String.format(whereStrModel, fieldName,paraObjValue.toString());//  fieldName+" = "+paraObjValue+" AND ";
 			}
 			else {
-				whereStr+=fieldName+" =? AND ";
+				whereStr+=String.format(whereStrModel, fieldName,"?"); //fieldName+" =? AND ";
 			}
 		}
 		if(whereStr.endsWith("AND "))
